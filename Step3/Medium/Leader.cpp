@@ -8,6 +8,7 @@ vector<int> Leader(vector<int>arr){
         if(arr[i]>maxi){
             ans.push_back(arr[i]);
         }
+        maxi=max(maxi,arr[i]);
 
     }
     sort(ans.begin(),ans.end());
