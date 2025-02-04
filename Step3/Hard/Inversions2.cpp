@@ -42,4 +42,10 @@ int merge(vector<int>&arr,int low,int mid,int high){
     cnt += merge(arr, low, mid, high);  // merging sorted halves
     return cnt;
     }
+int numberOfInversions(vector<int>&a, int n) {
+
+    // Count the number of pairs:
+    return mergeSort(a, 0, n - 1);
+}
+
 
