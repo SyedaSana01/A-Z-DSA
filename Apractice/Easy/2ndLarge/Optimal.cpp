@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int second(int arr[],int n){
+pair<int,int> second(int arr[],int n){
     int largest=INT_MIN;
     int sLargest=INT_MIN;
     int Smallest=INT_MAX;
@@ -23,9 +23,7 @@ int second(int arr[],int n){
             sSmallest=arr[i];
         }
     }
-    return sLargest;
-    cout<<endl;
-    return sSmallest;
+    return make_pair(sLargest,sSmallest);
 }
 int main(){
     int n;
@@ -34,6 +32,7 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-    int ans=second(arr,n);
-    cout<<ans << endl;
+    pair<int,int> ans =second(arr,n);
+    cout<<ans<<ans.first <<endl<<ans.second;
+    
 }
