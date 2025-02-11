@@ -6,7 +6,7 @@ int LB(vector<int>&arr,int target,int n){
     int ans=n;
     while(low<=high){
         int mid=(low+high)/2;
-        if(arr[mid]==target){
+        if(arr[mid]>=target){
             ans= mid;
             high=mid-1;   
 
